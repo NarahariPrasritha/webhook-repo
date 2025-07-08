@@ -1,0 +1,22 @@
+# Webhook Receiver (Flask + MongoDB)
+
+## How to run:
+1. Install dependencies:
+   pip install -r requirements.txt
+
+2. Start MongoDB locally
+
+3. Run the Flask server:
+   python app.py
+
+4. Start ngrok:
+   ./ngrok.exe http 5000
+
+5. Set the generated ngrok URL as the webhook in the action-repo
+
+## Endpoints:
+- GET /get-events — fetches stored webhook events
+
+## Tested Events:
+- ✅ Push event successfully delivered and stored.
+- ⚠️ Pull Request event attempted (details in webhook deliveries)
